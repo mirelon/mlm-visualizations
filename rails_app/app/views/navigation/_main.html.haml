@@ -1,0 +1,9 @@
+%nav.navbar.navbar-inverse.navbar-static-top.navbar-affix{"data-offset-top" => "60", "data-spy" => "affix", :role => "navigation"}
+  .container
+    .navbar-header
+      %a.navbar-brand{:href => "#"}
+        .icon.fa.fa-paper-plane
+        .title CLAAB
+    #navbar.navbar-collapse.collapse{"aria-expanded" => "true"}
+      = menu_group do
+        = menu_item 'Home', home_index_path

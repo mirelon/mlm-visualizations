@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}/
+    %title Claab
+    = csrf_meta_tags
+    = action_cable_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+  - if @is_landing_page
+    %body.flat-blue.landing-page
+      = yield
+  - else
+    %body.flat-blue
+      = render 'navigation/main'
+      = render 'layouts/flash_messages'
+      %div.side-body
+        = yield
+

@@ -1,0 +1,18 @@
+Users:
+%table{border: 1}
+  %tr
+    %th ID
+    %th First name
+    %th Surname
+    %th Email
+    %th Parent ID
+    %th Balance
+  - @users.each do |user|
+    %tr
+      %td= user.id
+      %td= user.firstname
+      %td= user.surname
+      %td= user.email
+      %td= user.ancestry
+      %td= user.balance
+  
